@@ -1,42 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Cyberpunk Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Core Colors - Cyberpunk Aesthetic */
+    --background: 0 0% 0%;                    /* Pure black */
+    --foreground: 0 0% 100%;                  /* Pure white */
+    
+    --card: 0 0% 5%;                          /* Dark grey cards */
+    --card-foreground: 0 0% 100%;
+    
+    --neon-green: 106 100% 55%;               /* #39FF14 neon green */
+    --neon-green-glow: 106 100% 55%;
+    --neon-dim: 106 50% 35%;                  /* Dimmed green */
+    
+    --primary: 106 100% 55%;                  /* Neon green as primary */
+    --primary-foreground: 0 0% 0%;
+    
+    --secondary: 0 0% 15%;                    /* Dark grey */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 25%;                        /* Medium grey */
+    --muted-foreground: 0 0% 70%;
+    
+    --accent: 106 100% 55%;                   /* Neon green accent */
+    --accent-foreground: 0 0% 0%;
+    
+    --border: 0 0% 20%;                       /* Dark grey borders */
+    --input: 0 0% 10%;
+    --ring: 106 100% 55%;                     /* Neon green focus */
+    
+    --radius: 0.25rem;                        /* Sharp corners for cyberpunk feel */
+    
+    /* Gradients */
+    --gradient-neon: linear-gradient(135deg, hsl(106 100% 55%), hsl(106 80% 45%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 0%), hsl(0 0% 5%));
+    
+    /* Shadows & Glows */
+    --shadow-neon: 0 0 20px hsl(106 100% 55% / 0.5);
+    --shadow-neon-strong: 0 0 40px hsl(106 100% 55% / 0.8);
+    --text-glow: 0 0 10px hsl(106 100% 55% / 0.8);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glitch: all 0.1s ease-in-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +112,140 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Typography Classes */
+  .heading-cyberpunk {
+    @apply font-bebas text-white uppercase tracking-widest;
+  }
+  
+  .text-neon {
+    @apply text-[hsl(var(--neon-green))];
+    text-shadow: var(--text-glow);
+  }
+  
+  .text-gradient-neon {
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Cyberpunk Effects */
+  .glow-neon {
+    box-shadow: var(--shadow-neon);
+  }
+  
+  .glow-neon-strong {
+    box-shadow: var(--shadow-neon-strong);
+  }
+  
+  .border-neon {
+    @apply border border-[hsl(var(--neon-green))];
+  }
+  
+  /* Animations */
+  .glitch-effect {
+    position: relative;
+    transition: var(--transition-glitch);
+  }
+  
+  .glitch-effect:hover {
+    transform: skew(-2deg);
+  }
+  
+  .glitch-effect:hover::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 100%;
+    color: #39FF14;
+    background: transparent;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch-1 0.3s infinite linear alternate-reverse;
+  }
+  
+  .glitch-effect:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 100%;
+    color: #ff0040;
+    background: transparent;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch-2 0.3s infinite linear alternate-reverse;
+  }
+  
+  /* Scanlines Effect */
+  .scanlines {
+    position: relative;
+  }
+  
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(57, 255, 20, 0.03) 2px,
+      rgba(57, 255, 20, 0.03) 4px
+    );
+    pointer-events: none;
+  }
+  
+  /* Barcode Element */
+  .barcode {
+    @apply flex gap-[1px] h-8;
+  }
+  
+  .barcode div {
+    @apply bg-[hsl(var(--neon-green))] opacity-80;
+    width: 2px;
+  }
+  
+  .barcode div:nth-child(2n) {
+    width: 1px;
+  }
+  
+  .barcode div:nth-child(3n) {
+    width: 3px;
+  }
+}
+
+@keyframes glitch-1 {
+  0% { clip: rect(44px, 450px, 56px, 0); }
+  25% { clip: rect(25px, 450px, 33px, 0); }
+  50% { clip: rect(80px, 450px, 90px, 0); }
+  75% { clip: rect(10px, 450px, 15px, 0); }
+  100% { clip: rect(70px, 450px, 75px, 0); }
+}
+
+@keyframes glitch-2 {
+  0% { clip: rect(65px, 450px, 75px, 0); }
+  25% { clip: rect(15px, 450px, 25px, 0); }
+  50% { clip: rect(90px, 450px, 95px, 0); }
+  75% { clip: rect(35px, 450px, 45px, 0); }
+  100% { clip: rect(55px, 450px, 65px, 0); }
+}
+
+@keyframes neon-pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px hsl(106 100% 55% / 0.8);
+  }
+  50% {
+    text-shadow: 0 0 20px hsl(106 100% 55% / 1), 0 0 30px hsl(106 100% 55% / 0.6);
   }
 }
