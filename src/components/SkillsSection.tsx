@@ -10,7 +10,7 @@ export const SkillsSection = () => {
   }
 
   return (
-    <section className="py-20 bg-secondary/10">
+    <section id="skills" className="py-20 bg-secondary/10">
       <div className="container mx-auto px-6">
         <h2 className="heading-cyberpunk text-4xl md:text-5xl text-center mb-16 text-neon">
           TECHNICAL SKILLS

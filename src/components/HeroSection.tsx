@@ -1,17 +1,23 @@
 import { CyberpunkButton } from "./ui/cyberpunk-button"
 import { Barcode } from "./Barcode"
+import { ThemeToggle } from "./ThemeToggle"
+import { Navigation } from "./Navigation"
 import profileImage from "@/assets/rahul-profile.jpg"
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden scanlines">
-      {/* Background elements */}
-      <Barcode className="absolute top-10 right-10 opacity-30 animate-float" bars={15} />
+    <>
+      <Navigation />
+      <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden scanlines pt-16">
+        <ThemeToggle />
+        
+        {/* Background elements */}
+        <Barcode className="absolute top-10 right-24 opacity-30 animate-float" bars={15} />
       
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-6 animate-slide-up">
-          <h1 className="heading-cyberpunk text-6xl md:text-8xl lg:text-9xl leading-none">
+          <h1 className="heading-cyberpunk text-6xl md:text-8xl lg:text-9xl leading-none text-foreground">
             RAHUL<br />DHOTE
           </h1>
           
@@ -54,5 +60,6 @@ export const HeroSection = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }

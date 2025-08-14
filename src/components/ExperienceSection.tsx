@@ -31,7 +31,7 @@ export const ExperienceSection = () => {
   ]
 
   return (
-    <section className="py-20">
+    <section id="experience" className="py-20">
       <div className="container mx-auto px-6">
         <h2 className="heading-cyberpunk text-4xl md:text-5xl text-center mb-16 text-neon">
           EXPERIENCE & EDUCATION
@@ -48,7 +48,7 @@ export const ExperienceSection = () => {
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
                     {index % 2 === 0 && (
                       <div className="space-y-2">
-                        <h3 className="heading-cyberpunk text-xl text-white">{item.title}</h3>
+                        <h3 className="heading-cyberpunk text-xl text-foreground">{item.title}</h3>
                         <p className="text-neon font-bebas tracking-wider">{item.company}</p>
                         <p className="text-neon text-sm font-mono">{item.period}</p>
                         <p className="text-muted-foreground text-sm">{item.description}</p>
@@ -62,7 +62,7 @@ export const ExperienceSection = () => {
                   <div className={`w-5/12 ${index % 2 === 1 ? 'pl-8' : 'pr-8'}`}>
                     {index % 2 === 1 && (
                       <div className="space-y-2">
-                        <h3 className="heading-cyberpunk text-xl text-white">{item.title}</h3>
+                        <h3 className="heading-cyberpunk text-xl text-foreground">{item.title}</h3>
                         <p className="text-neon font-bebas tracking-wider">{item.company}</p>
                         <p className="text-neon text-sm font-mono">{item.period}</p>
                         <p className="text-muted-foreground text-sm">{item.description}</p>

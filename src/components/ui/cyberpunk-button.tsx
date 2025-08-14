@@ -10,9 +10,9 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         outline: 
-          "border-2 border-neon-green bg-transparent text-neon-green hover:bg-neon-green hover:text-black transition-all duration-300 hover:glow-neon",
+          "border-2 border-[hsl(var(--neon-green))] bg-transparent text-[hsl(var(--neon-green))] hover:bg-[hsl(var(--neon-green))] hover:text-[hsl(var(--neon-green-glow))] transition-all duration-300 hover:glow-neon",
         hero: 
-          "bg-neon-green text-black hover:bg-transparent hover:text-neon-green border-2 border-neon-green transition-all duration-300 hover:glow-neon glitch-effect",
+          "bg-[hsl(var(--neon-green))] text-black hover:bg-transparent hover:text-[hsl(var(--neon-green))] border-2 border-[hsl(var(--neon-green))] transition-all duration-300 hover:glow-neon glitch-effect",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },

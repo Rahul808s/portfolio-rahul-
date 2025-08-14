@@ -64,45 +64,63 @@
 
     --sidebar-border: 220 13% 91%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 3%;                       /* Darker black for dark mode */
+    --foreground: 0 0% 98%;                      /* Pure white */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 8%;                             /* Dark grey cards */
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --neon-green: 106 100% 55%;                  /* Same neon green */
+    --neon-green-glow: 106 100% 55%;
+    --neon-dim: 106 50% 35%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 106 100% 55%;                     /* Neon green as primary */
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 12%;                       /* Dark grey */
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 20%;                           /* Medium grey */
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 106 100% 55%;                      /* Neon green accent */
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --border: 0 0% 15%;                          /* Dark grey borders */
+    --input: 0 0% 8%;
+    --ring: 106 100% 55%;                        /* Neon green focus */
+  }
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  /* Light theme */
+  .light {
+    --background: 0 0% 100%;                     /* Pure white */
+    --foreground: 0 0% 10%;                      /* Almost black */
+
+    --card: 0 0% 98%;                            /* Light grey cards */
+    --card-foreground: 0 0% 10%;
+
+    --neon-green: 106 80% 40%;                   /* Darker green for light mode */
+    --neon-green-glow: 106 80% 40%;
+    --neon-dim: 106 60% 30%;
+
+    --primary: 106 80% 40%;                      /* Dark green as primary */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96%;                       /* Light grey */
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 92%;                           /* Light grey */
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 106 80% 40%;                       /* Dark green accent */
+    --accent-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;                          /* Light grey borders */
+    --input: 0 0% 96%;
+    --ring: 106 80% 40%;                         /* Dark green focus */
   }
 }
 
@@ -120,7 +138,7 @@
 @layer components {
   /* Typography Classes */
   .heading-cyberpunk {
-    @apply font-bebas text-white uppercase tracking-widest;
+    @apply font-bebas text-foreground uppercase tracking-widest;
   }
   
   .text-neon {

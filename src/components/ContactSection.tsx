@@ -21,7 +21,7 @@ export const ContactSection = () => {
   ]
 
   return (
-    <section className="py-20 bg-secondary/10">
+    <section id="contact" className="py-20 bg-secondary/10">
       <div className="container mx-auto px-6 text-center">
         <Barcode className="mx-auto mb-8 opacity-30" bars={30} />
         
