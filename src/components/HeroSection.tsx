@@ -17,11 +17,11 @@ export const HeroSection = () => {
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-6 animate-slide-up">
-          <h1 className="heading-cyberpunk  text-6xl md:text-8xl font-boxigen lg:text-9xl leading-none text-foreground text-[#15ff00]">
+          <h1 className="heading-cyberpunk text-6xl md:text-8xl lg:text-9xl leading-none text-foreground">
             RAHUL<br />DHOTE
           </h1>
           
-          <h2 className="text-white text-2xl md:text-3xl font-bebas tracking-wider animate-neon-pulse">
+          <h2 className="text-gradient-neon text-2xl md:text-3xl font-bebas tracking-wider animate-neon-pulse">
             MERN STACK DEVELOPER
           </h2>
           
@@ -53,7 +53,7 @@ export const HeroSection = () => {
             <img 
               src={profileImage} 
               alt="Rahul Dhote" 
-              className="w-80 h-80  object-cover grayscale border-4 border-neon-green glow-neon-strong animate-float"
+              className="w-80 h-80 object-cover grayscale border-4 border-neon-green glow-neon-strong animate-float"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-neon-green/20"></div>
           </div>
