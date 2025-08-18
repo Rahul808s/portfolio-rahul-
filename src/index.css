@@ -1,47 +1,50 @@
+/* Import Google Fonts first */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap');
-@font-face {
-  font-family:F-Smile ;
-  src: url(../public/fonts/FunkySmile-Regular.otf);
-}
 
-
+/* Tailwind directives must come right after imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Cyberpunk Design System */
+/* Custom font-face (after Tailwind directives) */
+@font-face {
+  font-family: "F-Smile";
+  src: url("../public/fonts/FunkySmile-Regular.otf");
+}
 
+/* Cyberpunk Design System */
 @layer base {
   :root {
     /* Core Colors - Cyberpunk Aesthetic */
-    --background: 0 0% 0%;                    /* Pure black */
-    --foreground: 0 0% 100%;                  /* Pure white */
-    
-    --card: 0 0% 5%;                          /* Dark grey cards */
+
+    --background: 0 0% 0%;                    
+    --foreground: 0 0% 100%;                  
+
+    --card: 0 0% 5%;                          
     --card-foreground: 0 0% 100%;
     
-    --neon-green: 106 100% 55%;               /* #39FF14 neon green */
+    --neon-green: 106 100% 55%;               
     --neon-green-glow: 106 100% 55%;
-    --neon-dim: 106 50% 35%;                  /* Dimmed green */
+    --neon-dim: 106 50% 35%;                  
     
-    --primary: 106 100% 55%;                  /* Neon green as primary */
+    --primary: 106 100% 55%;                  
     --primary-foreground: 0 0% 0%;
     
-    --secondary: 0 0% 15%;                    /* Dark grey */
+    --secondary: 0 0% 15%;                    
     --secondary-foreground: 0 0% 100%;
     
-    --muted: 0 0% 25%;                        /* Medium grey */
+    --muted: 0 0% 25%;                        
     --muted-foreground: 0 0% 70%;
     
-    --accent: 106 100% 55%;                   /* Neon green accent */
+    --accent: 106 100% 55%;                   
     --accent-foreground: 0 0% 0%;
     
-    --border: 0 0% 20%;                       /* Dark grey borders */
+    --border: 0 0% 20%;                       
     --input: 0 0% 10%;
-    --ring: 106 100% 55%;                     /* Neon green focus */
+    --ring: 106 100% 55%;                     
     
-    --radius: 0.25rem;                        /* Sharp corners for cyberpunk feel */
-    
+    --radius: 0.25rem;                        
+
     /* Gradients */
     --gradient-neon: linear-gradient(135deg, hsl(106 100% 55%), hsl(106 80% 45%));
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 0%), hsl(0 0% 5%));
@@ -55,220 +58,11 @@
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-glitch: all 0.1s ease-in-out;
 
+    /* Sidebar Colors */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-  }
-
-  .dark {
-    --background: 0 0% 3%;                       /* Darker black for dark mode */
-    --foreground: 0 0% 98%;                      /* Pure white */
-
-    --card: 0 0% 8%;                             /* Dark grey cards */
-    --card-foreground: 0 0% 98%;
-
-    --neon-green: 106 100% 55%;                  /* Same neon green */
-    --neon-green-glow: 106 100% 55%;
-    --neon-dim: 106 50% 35%;
-
-    --primary: 106 100% 55%;                     /* Neon green as primary */
-    --primary-foreground: 0 0% 0%;
-
-    --secondary: 0 0% 12%;                       /* Dark grey */
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 20%;                           /* Medium grey */
-    --muted-foreground: 0 0% 65%;
-
-    --accent: 106 100% 55%;                      /* Neon green accent */
-    --accent-foreground: 0 0% 0%;
-
-    --border: 0 0% 15%;                          /* Dark grey borders */
-    --input: 0 0% 8%;
-    --ring: 106 100% 55%;                        /* Neon green focus */
-  }
-
-  /* Light theme */
-  .light {
-    --background: 0 0% 100%;                     /* Pure white */
-    --foreground: 0 0% 10%;                      /* Almost black */
-
-    --card: 0 0% 98%;                            /* Light grey cards */
-    --card-foreground: 0 0% 10%;
-
-    --neon-green: 106 80% 40%;                   /* Darker green for light mode */
-    --neon-green-glow: 106 80% 40%;
-    --neon-dim: 106 60% 30%;
-
-    --primary: 106 80% 40%;                      /* Dark green as primary */
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 0 0% 96%;                       /* Light grey */
-    --secondary-foreground: 0 0% 10%;
-
-    --muted: 0 0% 92%;                           /* Light grey */
-    --muted-foreground: 0 0% 45%;
-
-    --accent: 106 80% 40%;                       /* Dark green accent */
-    --accent-foreground: 0 0% 98%;
-
-    --border: 0 0% 90%;                          /* Light grey borders */
-    --input: 0 0% 96%;
-    --ring: 106 80% 40%;                         /* Dark green focus */
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-inter;
-    overflow-x: hidden;
-  }
-}
-
-@layer components {
-  /* Typography Classes */
-  .heading-cyberpunk {
-    @apply font-bebas text-foreground uppercase tracking-widest;
-  }
-  
-  .text-neon {
-    @apply text-[hsl(var(--neon-green))];
-    text-shadow: var(--text-glow);
-  }
-  
-  .text-gradient-neon {
-    background: var(--gradient-neon);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  
-  /* Cyberpunk Effects */
-  .glow-neon {
-    box-shadow: var(--shadow-neon);
-  }
-  
-  .glow-neon-strong {
-    box-shadow: var(--shadow-neon-strong);
-  }
-  
-  .border-neon {
-    @apply border border-[hsl(var(--neon-green))];
-  }
-  
-  /* Animations */
-  .glitch-effect {
-    position: relative;
-    transition: var(--transition-glitch);
-  }
-  
-  .glitch-effect:hover {
-    transform: skew(-2deg);
-  }
-  
-  .glitch-effect:hover::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 2px;
-    width: 100%;
-    color: #39FF14;
-    background: transparent;
-    overflow: hidden;
-    clip: rect(0, 900px, 0, 0);
-    animation: glitch-1 0.3s infinite linear alternate-reverse;
-  }
-  
-  .glitch-effect:hover::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: -2px;
-    width: 100%;
-    color: #ff0040;
-    background: transparent;
-    overflow: hidden;
-    clip: rect(0, 900px, 0, 0);
-    animation: glitch-2 0.3s infinite linear alternate-reverse;
-  }
-  
-  /* Scanlines Effect */
-  .scanlines {
-    position: relative;
-  }
-  
-  .scanlines::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(57, 255, 20, 0.03) 2px,
-      rgba(57, 255, 20, 0.03) 4px
-    );
-    pointer-events: none;
-  }
-  
-  /* Barcode Element */
-  .barcode {
-    @apply flex gap-[1px] h-8;
-  }
-  
-  .barcode div {
-    @apply bg-[hsl(var(--neon-green))] opacity-80;
-    width: 2px;
-  }
-  
-  .barcode div:nth-child(2n) {
-    width: 1px;
-  }
-  
-  .barcode div:nth-child(3n) {
-    width: 3px;
-  }
-}
-
-@keyframes glitch-1 {
-  0% { clip: rect(44px, 450px, 56px, 0); }
-  25% { clip: rect(25px, 450px, 33px, 0); }
-  50% { clip: rect(80px, 450px, 90px, 0); }
-  75% { clip: rect(10px, 450px, 15px, 0); }
-  100% { clip: rect(70px, 450px, 75px, 0); }
-}
-
-@keyframes glitch-2 {
-  0% { clip: rect(65px, 450px, 75px, 0); }
-  25% { clip: rect(15px, 450px, 25px, 0); }
-  50% { clip: rect(90px, 450px, 95px, 0); }
-  75% { clip: rect(35px, 450px, 45px, 0); }
-  100% { clip: rect(55px, 450px, 65px, 0); }
-}
-
-@keyframes neon-pulse {
-  0%, 100% {
-    text-shadow: 0 0 10px hsl(106 100% 55% / 0.8);
-  }
-  50% {
-    text-shadow: 0 0 20px hsl(106 100% 55% / 1), 0 0 30px hsl(106 100% 55% / 0.6);
+    --sidebar-accent: 240 4.8% 95%;
   }
 }
