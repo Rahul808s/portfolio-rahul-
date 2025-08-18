@@ -23,6 +23,7 @@ const config: Config = {
         inter: ["Inter", "sans-serif"],
         mono: ["Roboto Mono", "monospace"],
         fsmile: ["F-Smile", "sans-serif"], // ✅ your custom font
+        boxigen: ["boxigen", "sans-serif"], // ✅ your custom font
       },
       colors: {
         border: "hsl(var(--border))",

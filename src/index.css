@@ -12,6 +12,11 @@
   src: url("../public/fonts/FunkySmile-Regular.otf");
 }
 
+@font-face {
+  font-family: "boxigen";
+  src: url("../public/fonts/BOXIGEN.otf");
+}
+
 /* Cyberpunk Design System */
 @layer base {
   :root {
