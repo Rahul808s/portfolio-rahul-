@@ -1,5 +1,5 @@
 import { Sun, Moon } from "lucide-react"
-import { useTheme } from "next-themes"
+import { useTheme } from "@/components/theme-provider"
 import { CyberpunkButton } from "./ui/cyberpunk-button"
 
 export const ThemeToggle = () => {
