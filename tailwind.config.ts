@@ -120,3 +120,14 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        fsmile: ['F-Smile'], // custom name you can use in classes
+      },
+    },
+  },
+};
+
