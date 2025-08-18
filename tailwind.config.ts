@@ -22,6 +22,8 @@ export default {
 				'bebas': ['Bebas Neue', 'cursive'],
 				'inter': ['Inter', 'sans-serif'],
 				'mono': ['Roboto Mono', 'monospace'],
+        'boiling': ['Boiling', 'cursive'],
+        'blisey': ['Blisey', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

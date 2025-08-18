@@ -4,6 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: boiling;
+  src: url(../public/Boiling-BlackDemo.ttf);
+}
+
+@font-face {
+  font-family: blisey;
+  src: url(../public/Blisey.otf);
+}
+
 /* Cyberpunk Design System */
 
 @layer base {

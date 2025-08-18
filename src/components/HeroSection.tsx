@@ -17,7 +17,7 @@ export const HeroSection = () => {
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-6 animate-slide-up">
-          <h1 className="heading-cyberpunk text-6xl md:text-8xl lg:text-9xl leading-none text-foreground">
+          <h1 className="heading-cyberpunk text-[#11ff58] font-blisey text-6xl md:text-8xl lg:text-9xl leading-none text-foreground">
             RAHUL<br />DHOTE
           </h1>
           
