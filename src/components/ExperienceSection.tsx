@@ -50,14 +50,20 @@ export const ExperienceSection = () => {
   return (
     <section id="experience" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="heading-cyberpunk text-4xl md:text-5xl text-center mb-16 text-neon animate-neon-pulse">
+        <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-center mb-16 text-neon animate-neon-pulse">
           EXPERIENCE & EDUCATION
         </h2>
         
         <div className="max-w-6xl mx-auto">
           <div className="relative">
-            {/* Zigzag timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-px w-0.5 h-full bg-gradient-to-b from-neon-green via-neon-dim to-neon-green opacity-60 animate-pulse"></div>
+            {/* Graph-like timeline with data visualization */}
+            <div className="absolute left-1/2 transform -translate-x-px w-1 h-full bg-gradient-to-b from-neon-green via-red-500 to-neon-green opacity-80">
+              {/* Grid lines for graph effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500/20 to-transparent w-screen left-1/2 transform -translate-x-1/2"></div>
+              {Array.from({ length: 20 }).map((_, i) => (
+                <div key={i} className="absolute w-screen left-1/2 transform -translate-x-1/2 h-px bg-red-500/10" style={{ top: `${i * 5}%` }}></div>
+              ))}
+            </div>
             
             {timeline.map((item, index) => {
               const isLeft = index % 2 === 0
@@ -70,32 +76,53 @@ export const ExperienceSection = () => {
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  {/* Connecting line to timeline */}
-                  <div className={`absolute top-8 w-16 h-0.5 bg-neon-green transition-all duration-500 ${
+                  {/* Data point connecting line with graph styling */}
+                  <div className={`absolute top-8 w-16 h-1 bg-gradient-to-r transition-all duration-500 ${
                     isLeft 
-                      ? 'right-1/2 mr-8 group-hover:bg-gradient-to-r group-hover:from-neon-green group-hover:to-transparent' 
-                      : 'left-1/2 ml-8 group-hover:bg-gradient-to-l group-hover:from-neon-green group-hover:to-transparent'
-                  } ${hoveredIndex === index ? 'glow-neon' : ''}`}></div>
+                      ? 'right-1/2 mr-8 from-red-500 to-neon-green group-hover:from-red-600 group-hover:to-neon-green' 
+                      : 'left-1/2 ml-8 from-neon-green to-red-500 group-hover:from-neon-green group-hover:to-red-600'
+                  } ${hoveredIndex === index ? 'glow-neon shadow-lg shadow-red-500/50' : ''}`}></div>
                   
-                  {/* Timeline dot with icon */}
-                  <div className={`absolute left-1/2 top-6 transform -translate-x-1/2 w-12 h-12 bg-background border-2 border-neon-green rounded-full z-20 flex items-center justify-center transition-all duration-500 group-hover:scale-125 group-hover:border-4 ${
-                    hoveredIndex === index ? 'glow-neon-strong animate-neon-pulse' : ''
+                  {/* Data visualization dots */}
+                  <div className={`absolute top-6 w-20 h-6 flex items-center justify-between ${
+                    isLeft ? 'right-1/2 mr-6' : 'left-1/2 ml-6'
                   }`}>
-                    <Icon className={`w-6 h-6 transition-colors duration-300 ${
-                      item.type === 'experience' ? 'text-neon-green' : 'text-neon-green'
+                    {[...Array(4)].map((_, i) => (
+                      <div key={i} className={`w-1 bg-red-500 transition-all duration-300 ${
+                        hoveredIndex === index ? 'h-4 glow-neon' : 'h-2'
+                      }`} style={{ height: `${Math.random() * 16 + 8}px` }}></div>
+                    ))}
+                  </div>
+                  
+                  {/* Graph data point with icon */}
+                  <div className={`absolute left-1/2 top-6 transform -translate-x-1/2 w-14 h-14 bg-gradient-to-br from-background to-red-900/20 border-2 rounded-full z-20 flex items-center justify-center transition-all duration-500 group-hover:scale-125 ${
+                    hoveredIndex === index 
+                      ? 'border-red-500 glow-neon-strong animate-pulse shadow-lg shadow-red-500/50' 
+                      : 'border-neon-green hover:border-red-400'
+                  }`}>
+                    <Icon className={`w-7 h-7 transition-all duration-300 ${
+                      hoveredIndex === index 
+                        ? (item.type === 'experience' ? 'text-red-400' : 'text-neon-green') 
+                        : 'text-neon-green'
                     }`} />
                   </div>
                   
                   {/* Content card */}
                   <div className={`relative ${isLeft ? 'mr-auto pr-24' : 'ml-auto pl-24'} w-full max-w-md`}>
-                    <div className={`relative bg-card/80 backdrop-blur-sm border border-border rounded-lg p-6 transition-all duration-500 hover:border-neon-green hover:bg-card/90 group-hover:transform group-hover:scale-105 ${
-                      hoveredIndex === index ? 'glow-neon border-neon-green' : ''
+                    <div className={`relative bg-card/90 backdrop-blur-sm border rounded-lg p-6 transition-all duration-500 group-hover:transform group-hover:scale-105 ${
+                      hoveredIndex === index 
+                        ? 'glow-neon border-red-500 bg-gradient-to-br from-card/90 to-red-900/10 shadow-xl shadow-red-500/20' 
+                        : 'border-border hover:border-neon-green hover:bg-card/95'
                     } ${isLeft ? 'text-right' : 'text-left'}`}>
-                      {/* Type badge */}
-                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-mono mb-3 ${
-                        item.type === 'experience' 
-                          ? 'bg-neon-green/20 text-neon-green border border-neon-green/30' 
-                          : 'bg-neon-dim/20 text-neon-dim border border-neon-dim/30'
+                      {/* Data type badge */}
+                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-mono mb-3 transition-all duration-300 ${
+                        hoveredIndex === index 
+                          ? (item.type === 'experience' 
+                              ? 'bg-red-500/20 text-red-400 border border-red-500/50 glow-neon' 
+                              : 'bg-neon-green/30 text-neon-green border border-neon-green/50 glow-neon')
+                          : (item.type === 'experience' 
+                              ? 'bg-neon-green/20 text-neon-green border border-neon-green/30' 
+                              : 'bg-neon-dim/20 text-neon-dim border border-neon-dim/30')
                       }`}>
                         {item.type.toUpperCase()}
                       </div>

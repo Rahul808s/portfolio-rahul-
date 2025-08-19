@@ -26,7 +26,7 @@ export const HeroSection = () => {
             </span>
 
             <h1 className="heading-cyberpunk text-[#11ff58] font-blisey text-6xl md:text-8xl lg:text-6xl leading-none">
-            <span className=" lowercase">I am</span>  RAHUL DHOTE
+            <span className="lowercase">I am</span>  <span className="glitch-effect" data-text="RAHUL DHOTE">RAHUL DHOTE</span>
             </h1>
 
             <h2 className="text-gradient-neon text-2xl md:text-3xl font-bebas tracking-wider">

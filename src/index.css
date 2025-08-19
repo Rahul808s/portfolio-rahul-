@@ -151,6 +151,10 @@
     @apply font-bebas text-foreground uppercase tracking-widest;
   }
   
+  .heading-cyberpunk.font-blisey {
+    @apply font-blisey;
+  }
+  
   .text-neon {
     @apply text-[hsl(var(--neon-green))];
     text-shadow: var(--text-glow);
