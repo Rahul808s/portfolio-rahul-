@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: boiling;
-  src: url(../public/Boiling-BlackDemo.ttf);
+  src: url(/Boiling-BlackDemo.ttf);
 }
 
 @font-face {
@@ -151,9 +151,7 @@
     @apply font-bebas text-foreground uppercase tracking-widest;
   }
   
-  .heading-cyberpunk.font-blisey {
-    @apply font-blisey;
-  }
+
   
   .text-neon {
     @apply text-[hsl(var(--neon-green))];

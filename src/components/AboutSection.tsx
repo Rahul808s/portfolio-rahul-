@@ -14,18 +14,18 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-8">
-            <h2 className="heading-cyberpunk text-4xl md:text-5xl text-neon">
+            <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-[#11ff58]">
               WHO AM I
             </h2>
             
             <div className="space-y-4 max-w-lg">
-              <p className="text-foreground text-lg leading-relaxed">
+              <p className="text-foreground text-lg leading-relaxed font-mono">
                 I'm a passionate MERN stack developer with 2+ years of experience building 
                 modern web applications. I love creating efficient, scalable solutions that 
                 solve real-world problems.
               </p>
               
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed font-mono">
                 Currently working as a Junior Developer, I've contributed to various projects 
                 ranging from e-commerce platforms to data visualization dashboards. My goal is 
                 to continuously learn and push the boundaries of what's possible with code.
@@ -34,8 +34,8 @@ export const AboutSection = () => {
             
             {/* Skills */}
             <div className="space-y-4">
-              <h3 className="text-neon font-bebas text-xl tracking-wider">SKILLS</h3>
-              <div className="flex flex-wrap gap-3">
+              <h3 className="text-[#11ff58] font-blisey text-xl tracking-wider">SKILLS</h3>
+              <div className="flex flex-wrap gap-3  ">
                 {skills.map((skill) => (
                   <SkillPill key={skill}>{skill}</SkillPill>
                 ))}

@@ -50,7 +50,7 @@ export const ExperienceSection = () => {
   return (
     <section id="experience" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-center mb-16 text-neon animate-neon-pulse">
+        <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-center mb-16 text-[#11ff58] animate-neon-pulse">
           EXPERIENCE & EDUCATION
         </h2>
         
@@ -102,8 +102,8 @@ export const ExperienceSection = () => {
                   }`}>
                     <Icon className={`w-7 h-7 transition-all duration-300 ${
                       hoveredIndex === index 
-                        ? (item.type === 'experience' ? 'text-red-400' : 'text-neon-green') 
-                        : 'text-neon-green'
+                        ? (item.type === 'experience' ? 'text-red-400' : 'text-[#11ff58]-green') 
+                        : 'text-[#11ff58]-green'
                     }`} />
                   </div>
                   
@@ -119,20 +119,20 @@ export const ExperienceSection = () => {
                         hoveredIndex === index 
                           ? (item.type === 'experience' 
                               ? 'bg-red-500/20 text-red-400 border border-red-500/50 glow-neon' 
-                              : 'bg-neon-green/30 text-neon-green border border-neon-green/50 glow-neon')
+                              : 'bg-neon-green/30 text-[#11ff58]-green border border-neon-green/50 glow-neon')
                           : (item.type === 'experience' 
-                              ? 'bg-neon-green/20 text-neon-green border border-neon-green/30' 
-                              : 'bg-neon-dim/20 text-neon-dim border border-neon-dim/30')
+                              ? 'bg-neon-green/20 text-[#11ff58]-green border border-neon-green/30' 
+                              : 'bg-neon-dim/20 text-[#11ff58]-dim border border-neon-dim/30')
                       }`}>
                         {item.type.toUpperCase()}
                       </div>
                       
-                      <h3 className="heading-cyberpunk text-xl mb-2 text-foreground group-hover:text-neon transition-colors duration-300">
+                      <h3 className="heading-cyberpunk text-xl mb-2 text-foreground group-hover:text-[#11ff58] transition-colors duration-300">
                         {item.title}
                       </h3>
                       
                       <div className="space-y-2 mb-4">
-                        <p className="text-neon font-bebas tracking-wider text-lg">{item.company}</p>
+                        <p className="text-[#11ff58] font-bebas tracking-wider text-lg">{item.company}</p>
                         
                         <div className="flex items-center gap-4 text-sm text-muted-foreground">
                           <div className="flex items-center gap-1">

@@ -17,10 +17,10 @@ export const Navigation = () => {
           
           {/* Social Icons - Center */}
           <div className="flex items-center space-x-6">
-            <a href="https://github.com/Rahul808s" className="text-[#11ff58] hover:text-neon transition-colors">
+            <a href="https://github.com/Rahul808s" className="text-[#11ff58] hover:text-[#11ff58] transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://www.linkedin.com/in/rahul-dhote-9b50b3261/" className="text-[#11ff58] hover:text-neon transition-colors">
+            <a href="https://www.linkedin.com/in/rahul-dhote-9b50b3261/" className="text-[#11ff58] hover:text-[#11ff58] transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
           </div>

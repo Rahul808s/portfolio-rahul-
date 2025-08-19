@@ -34,7 +34,7 @@ export const ProjectCard = ({ title, description, image, technologies, demoUrl, 
         />
         {isHovered && (
           <div className="absolute inset-0 bg-neon-green/20 flex items-center justify-center">
-            <span className="text-neon-green font-bebas text-xl">VIEW PROJECT</span>
+            <span className="text-[#11ff58]-green font-bebas text-xl">VIEW PROJECT</span>
           </div>
         )}
       </div>
@@ -48,7 +48,7 @@ export const ProjectCard = ({ title, description, image, technologies, demoUrl, 
         {technologies.map((tech) => (
           <span 
             key={tech} 
-            className="text-xs px-2 py-1 bg-neon-green/10 text-neon-green border border-neon-green/30 font-mono"
+            className="text-xs px-2 py-1 bg-neon-green/10 text-[#11ff58]-green border border-neon-green/30 font-mono"
           >
             {tech}
           </span>
