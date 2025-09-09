@@ -40,26 +40,32 @@ export const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 bg-secondary/10">
       <div className="container mx-auto px-6">
-        <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-center mb-16 text-[#11ff58]">
+        {/* Section Heading */}
+        <h2 className="heading-cyberpunk font-blisey text-5xl md:text-6xl text-center mb-16 text-[#11ff58]">
           TECHNICAL SKILLS
         </h2>
         
-        <div className="space-y-12">
+        <div className="space-y-16">
           {Object.entries(skillCategories).map(([category, skills], index) => (
             <div key={category} className="relative">
               {/* Barcode between categories */}
               {index > 0 && (
-                <Barcode className="mx-auto mb-8 opacity-30" bars={25} />
+                <Barcode className="mx-auto mb-10 opacity-30" bars={25} />
               )}
               
-              <h3 className="text-[#11ff58] font-blisey text-2xl tracking-wider mb-6 text-center">
+              {/* Category Title */}
+              <h3 className="text-[#11ff58] font-blisey text-3xl tracking-wider mb-8 text-center">
                 {category}
               </h3>
               
-              <div className="flex flex-wrap justify-center gap-4">
+              {/* Skill Pills */}
+              <div className="flex flex-wrap justify-center gap-6">
                 {skills.map((skill) => (
-                  <SkillPill key={skill.name} className="flex items-center gap-2">
-                    <span className="text-lg">{skill.icon}</span>
+                  <SkillPill 
+                    key={skill.name} 
+                    className="flex items-center gap-3 px-6 py-3 text-xl font-semibold"
+                  >
+                    <span className="text-2xl">{skill.icon}</span>
                     {skill.name}
                   </SkillPill>
                 ))}

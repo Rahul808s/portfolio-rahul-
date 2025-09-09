@@ -53,21 +53,22 @@ export const ProjectsSection = () => {
   ]
 
   return (
-    <section id="projects" className="py-20">
-      <div className="container mx-auto px-6">
-        <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-center mb-12 text-[#11ff58]">
-          PROJECTS
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <ProjectCard 
-              key={project.title} 
-              {...project} 
-            />
-          ))}
-        </div>
-      </div>
-    </section>
+<section id="projects" className="py-20 rounded-3xl">
+  <div className="container mx-auto px-6">
+    <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-center mb-12 text-[#11ff58]">
+      PROJECTS
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center">
+      {projects.map((project) => (
+        <ProjectCard 
+          key={project.title} 
+          {...project} 
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
   )
 }

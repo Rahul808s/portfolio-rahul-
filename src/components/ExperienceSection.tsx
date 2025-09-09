@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { GraduationCap, Briefcase, Calendar, MapPin } from "lucide-react"
+import { GraduationCap, Briefcase } from "lucide-react"
 
 export const ExperienceSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  
+
   const timeline = [
     {
       type: "experience",
@@ -11,9 +11,10 @@ export const ExperienceSection = () => {
       company: "Tech Solutions Inc.",
       location: "Remote",
       period: "2023 - Present",
-      description: "Developing and maintaining web applications using MERN stack. Collaborated with cross-functional teams to deliver high-quality software solutions.",
+      description:
+        "Developing and maintaining web applications using MERN stack. Collaborated with cross-functional teams to deliver high-quality software solutions.",
       skills: ["React", "Node.js", "MongoDB", "Express"],
-      icon: Briefcase
+      icon: Briefcase,
     },
     {
       type: "education",
@@ -21,9 +22,10 @@ export const ExperienceSection = () => {
       company: "XYZ University",
       location: "Mumbai, India",
       period: "2019 - 2023",
-      description: "Graduated with First Class Honours. Specialized in Software Engineering and Database Management Systems.",
+      description:
+        "Graduated with First Class Honours. Specialized in Software Engineering and Database Management Systems.",
       skills: ["Data Structures", "Algorithms", "Software Engineering", "DBMS"],
-      icon: GraduationCap
+      icon: GraduationCap,
     },
     {
       type: "experience",
@@ -31,9 +33,10 @@ export const ExperienceSection = () => {
       company: "StartupXYZ",
       location: "Bangalore, India",
       period: "Summer 2022",
-      description: "Built responsive web interfaces using React and implemented RESTful API integrations. Gained experience in agile development methodologies.",
+      description:
+        "Built responsive web interfaces using React and implemented RESTful API integrations. Gained experience in agile development methodologies.",
       skills: ["React", "JavaScript", "CSS3", "REST APIs"],
-      icon: Briefcase
+      icon: Briefcase,
     },
     {
       type: "education",
@@ -41,140 +44,123 @@ export const ExperienceSection = () => {
       company: "Online Bootcamp",
       location: "Online",
       period: "2022",
-      description: "Intensive 6-month program covering MERN stack, DevOps, and modern web development best practices.",
+      description:
+        "Intensive 6-month program covering MERN stack, DevOps, and modern web development best practices.",
       skills: ["MERN Stack", "DevOps", "Git", "AWS"],
-      icon: GraduationCap
-    }
+      icon: GraduationCap,
+    },
   ]
 
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-24">
       <div className="container mx-auto px-6">
-        <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-center mb-16 text-[#11ff58] animate-neon-pulse">
+        <h2 className="heading-cyberpunk font-blisey text-5xl md:text-6xl text-center mb-20 text-[#11ff58]">
           EXPERIENCE & EDUCATION
         </h2>
-        
+
         <div className="max-w-6xl mx-auto">
           <div className="relative">
-            {/* Graph-like timeline with data visualization */}
-            <div className="absolute left-1/2 transform -translate-x-px w-1 h-full bg-gradient-to-b from-neon-green via-red-500 to-neon-green opacity-80">
-              {/* Grid lines for graph effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500/20 to-transparent w-screen left-1/2 transform -translate-x-1/2"></div>
-              {Array.from({ length: 20 }).map((_, i) => (
-                <div key={i} className="absolute w-screen left-1/2 transform -translate-x-1/2 h-px bg-red-500/10" style={{ top: `${i * 5}%` }}></div>
-              ))}
-            </div>
-            
+            {/* Vertical Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-px w-1 h-full bg-gradient-to-b from-neon-green opacity-80"></div>
+
             {timeline.map((item, index) => {
               const isLeft = index % 2 === 0
               const Icon = item.icon
-              
+
               return (
-                <div 
-                  key={index} 
-                  className="relative mb-16 group"
+                <div
+                  key={index}
+                  className="relative mb-24 group flex items-start"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  {/* Data point connecting line with graph styling */}
-                  <div className={`absolute top-8 w-16 h-1 bg-gradient-to-r transition-all duration-500 ${
-                    isLeft 
-                      ? 'right-1/2 mr-8 from-red-500 to-neon-green group-hover:from-red-600 group-hover:to-neon-green' 
-                      : 'left-1/2 ml-8 from-neon-green to-red-500 group-hover:from-neon-green group-hover:to-red-600'
-                  } ${hoveredIndex === index ? 'glow-neon shadow-lg shadow-red-500/50' : ''}`}></div>
-                  
-                  {/* Data visualization dots */}
-                  <div className={`absolute top-6 w-20 h-6 flex items-center justify-between ${
-                    isLeft ? 'right-1/2 mr-6' : 'left-1/2 ml-6'
-                  }`}>
-                    {[...Array(4)].map((_, i) => (
-                      <div key={i} className={`w-1 bg-red-500 transition-all duration-300 ${
-                        hoveredIndex === index ? 'h-4 glow-neon' : 'h-2'
-                      }`} style={{ height: `${Math.random() * 16 + 8}px` }}></div>
-                    ))}
+                  {/* Timeline Icon */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 z-20">
+                    <div
+                      className={`w-16 h-16 rounded-full border-2 bg-white flex items-center justify-center transition-all duration-500 ${
+                        hoveredIndex === index
+                          ? "border-green-500 glow-neon-strong shadow-lg shadow-green-500/50 scale-110"
+                          : "border-neon-green"
+                      }`}
+                    >
+                      <Icon
+                        className={`w-8 h-8 transition-all duration-300 ${
+                          hoveredIndex === index
+                            ? "text-green-400"
+                            : "text-[#11ff58]"
+                        }`}
+                      />
+                    </div>
                   </div>
-                  
-                  {/* Graph data point with icon */}
-                  <div className={`absolute left-1/2 top-6 transform -translate-x-1/2 w-14 h-14 bg-gradient-to-br from-background to-red-900/20 border-2 rounded-full z-20 flex items-center justify-center transition-all duration-500 group-hover:scale-125 ${
-                    hoveredIndex === index 
-                      ? 'border-red-500 glow-neon-strong animate-pulse shadow-lg shadow-red-500/50' 
-                      : 'border-neon-green hover:border-red-400'
-                  }`}>
-                    <Icon className={`w-7 h-7 transition-all duration-300 ${
-                      hoveredIndex === index 
-                        ? (item.type === 'experience' ? 'text-red-400' : 'text-[#11ff58]-green') 
-                        : 'text-[#11ff58]-green'
-                    }`} />
-                  </div>
-                  
-                  {/* Content card */}
-                  <div className={`relative ${isLeft ? 'mr-auto pr-24' : 'ml-auto pl-24'} w-full max-w-md`}>
-                    <div className={`relative bg-card/90 backdrop-blur-sm border rounded-lg p-6 transition-all duration-500 group-hover:transform group-hover:scale-105 ${
-                      hoveredIndex === index 
-                        ? 'glow-neon border-red-500 bg-gradient-to-br from-card/90 to-red-900/10 shadow-xl shadow-red-500/20' 
-                        : 'border-border hover:border-neon-green hover:bg-card/95'
-                    } ${isLeft ? 'text-right' : 'text-left'}`}>
-                      {/* Data type badge */}
-                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-mono mb-3 transition-all duration-300 ${
-                        hoveredIndex === index 
-                          ? (item.type === 'experience' 
-                              ? 'bg-red-500/20 text-red-400 border border-red-500/50 glow-neon' 
-                              : 'bg-neon-green/30 text-[#11ff58]-green border border-neon-green/50 glow-neon')
-                          : (item.type === 'experience' 
-                              ? 'bg-neon-green/20 text-[#11ff58]-green border border-neon-green/30' 
-                              : 'bg-neon-dim/20 text-[#11ff58]-dim border border-neon-dim/30')
-                      }`}>
-                        {item.type.toUpperCase()}
+
+                  {/* Connector Line from Icon to Card */}
+                  <div
+                    className={`absolute top-9 w-24 h-1 bg-gradient-to-r from-neon-green to-green-500 ${
+                      isLeft ? "right-1/2 mr-8" : "left-1/2 ml-8"
+                    }`}
+                  ></div>
+
+                  {/* Timeline Card */}
+                  <div
+                    className={`relative w-full max-w-lg ${
+                      isLeft
+                        ? "mr-auto pr-28 text-right"
+                        : "ml-auto pl-28 text-left"
+                    }`}
+                  >
+                    <div
+                      className={`bg-card/90 backdrop-blur-sm border rounded-xl p-8 transition-all duration-500 ${
+                        hoveredIndex === index
+                          ? "glow-neon border-green-500 bg-gradient-to-br from-card/90 "
+                          : "border-border hover:border-neon-green hover:bg-card/95"
+                      }`}
+                    >
+                      {/* Period Badge */}
+                      <div
+                        className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-mono mb-6 ${
+                          hoveredIndex === index
+                            ? "border border-neon-green/50 glow-neon text-red-500"
+                            : "text-red-500 border border-neon-green/30"
+                        }`}
+                      >
+                        {item.period}
                       </div>
-                      
-                      <h3 className="heading-cyberpunk text-xl mb-2 text-foreground group-hover:text-[#11ff58] transition-colors duration-300">
+
+                      {/* Title */}
+                      <h3 className="heading-cyberpunk text-2xl md:text-3xl mb-4 text-foreground group-hover:text-[#11ff58] transition-colors duration-300">
                         {item.title}
                       </h3>
-                      
-                      <div className="space-y-2 mb-4">
-                        <p className="text-[#11ff58] font-bebas tracking-wider text-lg">{item.company}</p>
-                        
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                          <div className="flex items-center gap-1">
-                            <Calendar className="w-4 h-4" />
-                            <span className="font-mono">{item.period}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <MapPin className="w-4 h-4" />
-                            <span>{item.location}</span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+
+                      {/* Description */}
+                      <p className="text-muted-foreground text-base md:text-lg mb-6 leading-relaxed">
                         {item.description}
                       </p>
-                      
-                      {/* Skills tags */}
-                      <div className={`flex flex-wrap gap-2 ${isLeft ? 'justify-end' : 'justify-start'}`}>
+
+                      {/* Skills List */}
+                      <ul
+                        className={`grid gap-3 text-base md:text-lg text-[#11ff58] ${
+                          isLeft ? "justify-end" : "justify-start"
+                        }`}
+                      >
                         {item.skills.map((skill, skillIndex) => (
-                          <span 
+                          <li
                             key={skillIndex}
-                            className="px-2 py-1 bg-secondary/50 text-secondary-foreground text-xs rounded border border-border hover:border-neon-green transition-colors duration-300"
+                            className="flex items-center gap-3"
                           >
+                            <span className="w-3 h-3 rounded-full bg-[#11ff58]"></span>
                             {skill}
-                          </span>
+                          </li>
                         ))}
-                      </div>
-                      
-                      {/* Decorative corner */}
-                      <div className={`absolute top-2 w-3 h-3 border-t-2 border-neon-green transition-opacity duration-300 ${
-                        hoveredIndex === index ? 'opacity-100' : 'opacity-0'
-                      } ${isLeft ? 'right-2 border-r-2' : 'left-2 border-l-2'}`}></div>
+                      </ul>
                     </div>
                   </div>
                 </div>
               )
             })}
-            
-            {/* Timeline end marker */}
-            <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 w-8 h-8 bg-neon-green rounded-full flex items-center justify-center">
-              <div className="w-3 h-3 bg-background rounded-full"></div>
+
+            {/* End Marker */}
+            <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 w-10 h-10 bg-neon-green rounded-full flex items-center justify-center">
+              <div className="w-4 h-4 bg-background rounded-full"></div>
             </div>
           </div>
         </div>
