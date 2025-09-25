@@ -1,5 +1,4 @@
 import { Github, Linkedin } from "lucide-react"
-import { ThemeToggle } from "./ThemeToggle"
 import { CyberpunkButton } from "./ui/cyberpunk-button"
 
 export const Navigation = () => {
@@ -25,14 +24,13 @@ export const Navigation = () => {
             </a>
           </div>
           
-          {/* Right Side - Let's Talk & Theme Toggle */}
+          {/* Right Side - Let's Talk */}
           <div className="flex items-center space-x-4">
             <CyberpunkButton
-            className="bg-[#11ff58] rounded-full"
+            className="bg-[#26ff67] rounded-full"
             variant="hero" size="sm">
               Let's Talk
             </CyberpunkButton>
-            <ThemeToggle />
           </div>
         </div>
       </div>
