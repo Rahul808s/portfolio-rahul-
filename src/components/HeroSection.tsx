@@ -1,5 +1,6 @@
 import { CyberpunkButton } from "./ui/cyberpunk-button"
 import { Barcode } from "./Barcode"
+import { ThemeToggle } from "./ThemeToggle"
 import { Navigation } from "./Navigation"
 import profileImage from "@/assets/rahul-profile.jpg"
 
@@ -11,6 +12,8 @@ export const HeroSection = () => {
         id="hero"
         className="min-h-screen flex items-center relative overflow-hidden scanlines pt-16"
       >
+        <ThemeToggle />
+
         {/* Background elements */}
         <Barcode className="absolute top-10 right-24 opacity-30 animate-float" bars={15} />
 
