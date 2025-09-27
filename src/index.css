@@ -25,11 +25,11 @@
     --card: 0 0% 5%;                          /* Dark grey cards */
     --card-foreground: 0 0% 100%;
     
-    --neon-green: 135 100% 56%;               /* #26ff67 neon green */
-    --neon-green-glow: 135 100% 56%;
-    --neon-dim: 135 50% 35%;                  /* Dimmed green */
+    --neon-green: 106 100% 55%;               /* #11ff58 - exact green from nav button */
+    --neon-green-glow: 106 100% 55%;
+    --neon-dim: 106 80% 40%;                  /* Dimmed green */
     
-    --primary: 135 100% 56%;                  /* Neon green as primary */
+    --primary: 106 100% 55%;                  /* Use exact nav button green */
     --primary-foreground: 0 0% 0%;
     
     --secondary: 0 0% 15%;                    /* Dark grey */
@@ -38,12 +38,12 @@
     --muted: 0 0% 25%;                        /* Medium grey */
     --muted-foreground: 0 0% 70%;
     
-    --accent: 135 100% 56%;                   /* Neon green accent */
+    --accent: 106 100% 55%;                   /* Use exact nav button green */
     --accent-foreground: 0 0% 0%;
     
     --border: 0 0% 20%;                       /* Dark grey borders */
     --input: 0 0% 10%;
-    --ring: 135 100% 56%;                     /* Neon green focus */
+    --ring: 106 100% 55%;                     /* Use exact nav button green */
     
     --radius: 0.25rem;                        /* Sharp corners for cyberpunk feel */
     
@@ -52,9 +52,9 @@
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 0%), hsl(0 0% 5%));
     
     /* Shadows & Glows */
-    --shadow-neon: 0 0 20px hsl(135 100% 56% / 0.5);
-    --shadow-neon-strong: 0 0 40px hsl(135 100% 56% / 0.8);
-    --text-glow: 0 0 10px hsl(135 100% 56% / 0.8);
+    --shadow-neon: 0 0 20px hsl(106 100% 55% / 0.5);
+    --shadow-neon-strong: 0 0 40px hsl(106 100% 55% / 0.8);
+    --text-glow: 0 0 10px hsl(106 100% 55% / 0.8);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -83,11 +83,11 @@
     --card: 0 0% 8%;                             /* Dark grey cards */
     --card-foreground: 0 0% 98%;
 
-    --neon-green: 135 100% 56%;                  /* Same neon green */
-    --neon-green-glow: 135 100% 56%;
-    --neon-dim: 135 50% 35%;
+    --neon-green: 106 100% 55%;                  /* Same nav button green */
+    --neon-green-glow: 106 100% 55%;
+    --neon-dim: 106 80% 40%;
 
-    --primary: 135 100% 56%;                     /* Neon green as primary */
+    --primary: 106 100% 55%;                     /* Use exact nav button green */
     --primary-foreground: 0 0% 0%;
 
     --secondary: 0 0% 12%;                       /* Dark grey */
@@ -96,12 +96,12 @@
     --muted: 0 0% 20%;                           /* Medium grey */
     --muted-foreground: 0 0% 65%;
 
-    --accent: 135 100% 56%;                      /* Neon green accent */
+    --accent: 106 100% 55%;                      /* Use exact nav button green */
     --accent-foreground: 0 0% 0%;
 
     --border: 0 0% 15%;                          /* Dark grey borders */
     --input: 0 0% 8%;
-    --ring: 135 100% 56%;                        /* Neon green focus */
+    --ring: 106 100% 55%;                        /* Use exact nav button green */
   }
 
   /* Light theme */
@@ -112,11 +112,11 @@
     --card: 0 0% 98%;                            /* Light grey cards */
     --card-foreground: 0 0% 10%;
 
-    --neon-green: 135 80% 40%;                   /* Darker green for light mode */
-    --neon-green-glow: 135 80% 40%;
-    --neon-dim: 135 60% 30%;
+    --neon-green: 106 80% 40%;                   /* Darker version for light mode */
+    --neon-green-glow: 106 80% 40%;
+    --neon-dim: 106 60% 30%;
 
-    --primary: 135 80% 40%;                      /* Dark green as primary */
+    --primary: 106 80% 40%;                      /* Dark green as primary */
     --primary-foreground: 0 0% 98%;
 
     --secondary: 0 0% 96%;                       /* Light grey */
@@ -125,12 +125,12 @@
     --muted: 0 0% 92%;                           /* Light grey */
     --muted-foreground: 0 0% 45%;
 
-    --accent: 135 80% 40%;                       /* Dark green accent */
+    --accent: 106 80% 40%;                       /* Dark green accent */
     --accent-foreground: 0 0% 98%;
 
     --border: 0 0% 90%;                          /* Light grey borders */
     --input: 0 0% 96%;
-    --ring: 135 80% 40%;                         /* Dark green focus */
+    --ring: 106 80% 40%;                         /* Dark green focus */
   }
 }
 

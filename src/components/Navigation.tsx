@@ -9,7 +9,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-10 h-10 rounded-full bg-[#11ff58] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
               <span className="text-black font-blisey font-bold text-xl">R</span>
             </div>
             <h1 className="uppercase font-blisey">ahul</h1>
@@ -17,10 +17,10 @@ export const Navigation = () => {
           
           {/* Social Icons - Center */}
           <div className="flex items-center space-x-6">
-            <a href="https://github.com/Rahul808s" className="text-[#11ff58] hover:text-[#11ff58] transition-colors">
+            <a href="https://github.com/Rahul808s" className="text-primary hover:text-primary/80 transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://www.linkedin.com/in/rahul-dhote-9b50b3261/" className="text-[#11ff58] hover:text-[#11ff58] transition-colors">
+            <a href="https://www.linkedin.com/in/rahul-dhote-9b50b3261/" className="text-primary hover:text-primary/80 transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
           </div>
@@ -28,7 +28,7 @@ export const Navigation = () => {
           {/* Right Side - Let's Talk & Theme Toggle */}
           <div className="flex items-center space-x-4">
             <CyberpunkButton
-            className="bg-[#11ff58] rounded-full"
+            className="rounded-full"
             variant="hero" size="sm">
               Let's Talk
             </CyberpunkButton>

@@ -18,11 +18,11 @@ export const HeroSection = () => {
           
           {/* Left Div - Text Content */}
           <div className="space-y-6 animate-slide-up text-center lg:text-left">
-            <span className="inline-block rounded-full bg-[#11ff58] border-[2px] border-black px-4 py-1 text-sm font-mono text-black">
+            <span className="inline-block rounded-full bg-primary border-[2px] border-black px-4 py-1 text-sm font-mono text-black">
               Hello There!
             </span>
 
-            <h1 className="heading-cyberpunk text-[#11ff58] font-blisey text-6xl md:text-8xl lg:text-6xl leading-none">I
+            <h1 className="heading-cyberpunk text-primary font-blisey text-6xl md:text-8xl lg:text-6xl leading-none">I
             <span className="lowercase"> am</span>  <span className="capitalize" data-text="Rahul DHOTE">Rahul Dhote</span>
             </h1>
 
@@ -42,7 +42,7 @@ export const HeroSection = () => {
                 VIEW MY WORK
               </CyberpunkButton>
               <CyberpunkButton
-              className="rounded-full bg-[#11ff58]"
+              className="rounded-full"
               variant="hero" size="lg" dataText="LET'S BUILD SOMETHING">
                 LET'S BUILD SOMETHING
               </CyberpunkButton>
@@ -63,7 +63,7 @@ export const HeroSection = () => {
               />
 
               {/* Hire Me Badge */}
-              <div className="absolute -bottom-6 -right-6 w-24 h-10 flex items-center justify-center rounded-full border-none bg-[#11ff58] border-black text-black font-bold z-20 animate-spin-slow">
+              <div className="absolute -bottom-6 -right-6 w-24 h-10 flex items-center justify-center rounded-full border-none bg-primary border-black text-black font-bold z-20 animate-spin-slow">
                 HIRE ME
               </div>
             </div>

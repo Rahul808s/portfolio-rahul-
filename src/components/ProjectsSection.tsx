@@ -55,7 +55,7 @@ export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-center mb-12 text-[#11ff58]">
+        <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-center mb-12 text-primary">
           PROJECTS
         </h2>
         

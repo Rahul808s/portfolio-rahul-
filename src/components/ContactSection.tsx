@@ -25,7 +25,7 @@ export const ContactSection = () => {
       <div className="container mx-auto px-6 text-center">
         <Barcode className="mx-auto mb-8 opacity-30" bars={30} />
         
-        <h2 className="heading-cyberpunk text-4xl md:text-6xl mb-8 text-[#11ff58]">
+        <h2 className="heading-cyberpunk text-4xl md:text-6xl mb-8 text-primary">
           LET'S CONNECT
         </h2>
         
@@ -34,14 +34,14 @@ export const ContactSection = () => {
           <div className="space-y-4">
             <button
               onClick={handleCopyEmail}
-              className="group flex items-center justify-center gap-3 mx-auto text-2xl md:text-3xl font-bebas tracking-wider text-[#11ff58] hover:text-white transition-colors"
+              className="group flex items-center justify-center gap-3 mx-auto text-2xl md:text-3xl font-bebas tracking-wider text-primary hover:text-white transition-colors"
             >
               <Mail className="w-8 h-8" />
               {email}
               <Copy className="w-6 h-6 opacity-50 group-hover:opacity-100 transition-opacity" />
             </button>
             {copied && (
-              <p className="text-[#11ff58] text-sm font-mono animate-slide-up">
+              <p className="text-primary text-sm font-mono animate-slide-up">
                 Email copied to clipboard!
               </p>
             )}
@@ -55,7 +55,7 @@ export const ContactSection = () => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-16 h-16 border-2 border-neon-green bg-transparent flex items-center justify-center text-[#11ff58]-green hover:bg-neon-green hover:text-black transition-all duration-300 hover:glow-neon group"
+                className="w-16 h-16 border-2 border-neon-green bg-transparent flex items-center justify-center text-neon-green hover:bg-neon-green hover:text-black transition-all duration-300 hover:glow-neon group"
               >
                 <Icon className="w-6 h-6 group-hover:scale-110 transition-transform" />
               </a>
@@ -64,7 +64,7 @@ export const ContactSection = () => {
           
           {/* Contact Form */}
           <div className="max-w-md mx-auto space-y-4">
-            <h3 className="text-[#11ff58] font-bebas text-xl tracking-wider mb-6">
+            <h3 className="text-primary font-bebas text-xl tracking-wider mb-6">
               SEND A MESSAGE
             </h3>
             

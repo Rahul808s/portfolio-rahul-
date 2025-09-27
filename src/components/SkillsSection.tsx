@@ -40,7 +40,7 @@ export const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 bg-secondary/10">
       <div className="container mx-auto px-6">
-        <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-center mb-16 text-[#11ff58]">
+        <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-center mb-16 text-primary">
           TECHNICAL SKILLS
         </h2>
         
@@ -52,7 +52,7 @@ export const SkillsSection = () => {
                 <Barcode className="mx-auto mb-8 opacity-30" bars={25} />
               )}
               
-              <h3 className="text-[#11ff58] font-blisey text-2xl tracking-wider mb-6 text-center">
+              <h3 className="text-primary font-blisey text-2xl tracking-wider mb-6 text-center">
                 {category}
               </h3>
               
