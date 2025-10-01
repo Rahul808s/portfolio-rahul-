@@ -14,7 +14,7 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-8">
-            <h2 className="heading-cyberpunk font-blisey text-4xl md:text-5xl text-[#11ff58]">
+            <h2 className="heading-cyberpunk font-sinostone text-4xl md:text-5xl text-[#11ff58]">
               WHO AM I
             </h2>
             
@@ -34,7 +34,7 @@ export const AboutSection = () => {
             
             {/* Skills */}
             <div className="space-y-4">
-              <h3 className="text-[#11ff58] font-blisey text-xl tracking-wider">SKILLS</h3>
+              <h3 className="text-[#11ff58] font-sinostone text-xl tracking-wider">SKILLS</h3>
               <div className="flex flex-wrap gap-3  ">
                 {skills.map((skill) => (
                   <SkillPill key={skill}>{skill}</SkillPill>

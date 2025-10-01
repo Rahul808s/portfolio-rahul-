@@ -18,18 +18,20 @@ export const HeroSection = () => {
           
           {/* Left Div - Text Content */}
           <div className="space-y-6 animate-slide-up text-center lg:text-left">
-            <span className="inline-block rounded-full bg-[#11ff58] border-[2px] border-black px-4 py-1 text-sm font-mono text-black">
+            <span className="inline-block rounded-full bg-[#11ff58] border-[2px]  px-4 py-1 text-xl font-mono text-black">
               Hello There!
             </span>
 
-            <h1 className="heading-cyberpunk text-[#11ff58] font-blisey text-6xl md:text-8xl lg:text-6xl leading-none">I
-            <span className="lowercase"> am</span>  <span className="capitalize" data-text="Rahul DHOTE">Rahul Dhote</span>
-            </h1>
+           <h1 className="heading-cyberpunk text-[#11ff58] font-bold font-sinostone text-8xl md:text-10xl lg:text-7xl  space-y-2">
+  <div>I'm Rahul Dhote</div>
+  <div>Junior Developer</div>
+  <div>Based in Indore</div>
+</h1>
 
-            <h2 className="text-gradient-neon text-2xl md:text-3xl font-bebas tracking-wider">
-              MERN STACK DEVELOPER
-            </h2>
 
+
+
+            
             <p className="text-muted-foreground text-lg max-w-md font-mono mx-auto lg:mx-0">
               Building the future one line of code at a time. Specializing in full-stack web
               applications with modern technologies.

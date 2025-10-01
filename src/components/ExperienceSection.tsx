@@ -47,7 +47,7 @@ export const ExperienceSection = () => {
   return (
     <section id="experience" className="py-20">
       <div className="container mx-auto px-6">
-        <h2 className="font-blisey text-4xl md:text-5xl text-center mb-16 text-foreground">
+        <h2 className="font-sinostone text-4xl md:text-5xl text-center mb-16 text-foreground">
           EXPERIENCE & EDUCATION
         </h2>
         
@@ -78,7 +78,7 @@ export const ExperienceSection = () => {
                         {item.type.toUpperCase()}
                       </div>
                       
-                      <h3 className="font-blisey text-xl mb-2 text-foreground">
+                      <h3 className="font-sinostone text-xl mb-2 text-foreground">
                         {item.title}
                       </h3>
                       

@@ -10,9 +10,9 @@ export const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="w-10 h-10 rounded-full bg-[#11ff58] flex items-center justify-center">
-              <span className="text-black font-blisey font-bold text-xl">R</span>
+              <span className="text-black font-sinostone font-bold text-xl">R</span>
             </div>
-            <h1 className="uppercase font-blisey">ahul</h1>
+            <h1 className="uppercase font-sinostone">ahul</h1>
           </div>
           
           {/* Social Icons - Center */}
