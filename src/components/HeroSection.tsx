@@ -18,55 +18,58 @@ export const HeroSection = () => {
           
           {/* Left Div - Text Content */}
           <div className="space-y-6 animate-slide-up text-center lg:text-left">
-            <span className="inline-block rounded-full bg-[#11ff58] border-[2px]  px-4 py-1 text-xl font-mono text-black">
+            <span className="inline-block rounded-full bg-primary border-2 border-primary px-4 py-1 text-sm font-mono text-black">
               Hello There!
             </span>
 
-           <h1 className="heading-cyberpunk text-[#11ff58] font-bold font-sinostone text-8xl md:text-10xl lg:text-7xl  space-y-2">
-  <div>I'm Rahul Dhote</div>
-  <div>Junior Developer</div>
-  <div>Based in Indore</div>
-</h1>
-
-
-
-
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              I'm <span className="text-primary">Rahul Dhote</span>, Product Designer based in USA.
+            </h1>
             
-            <p className="text-muted-foreground text-lg max-w-md font-mono mx-auto lg:mx-0">
-              Building the future one line of code at a time. Specializing in full-stack web
-              applications with modern technologies.
+            <p className="text-muted-foreground text-lg max-w-md mx-auto lg:mx-0">
+              I'm an experienced Product Designer with 18+ years in the field, collaborating with various companies and startups.
             </p>
 
-            <div className="flex gap-4 flex-wrap justify-center lg:justify-start rounded-full">
+            <div className="flex gap-4 flex-wrap justify-center lg:justify-start">
               <CyberpunkButton
-                className="rounded-full hover:text-black"
+                className="rounded-full"
                 variant="outline" size="lg" dataText="VIEW MY WORK">
                 VIEW MY WORK
               </CyberpunkButton>
               <CyberpunkButton
-              className="rounded-full bg-[#11ff58]"
-              variant="hero" size="lg" dataText="LET'S BUILD SOMETHING">
-                LET'S BUILD SOMETHING
+                className="rounded-full"
+                variant="hero" size="lg" dataText="DOWNLOAD CV">
+                DOWNLOAD CV
               </CyberpunkButton>
             </div>
           </div>
 
-          {/* Right Div - Profile Image with Background Circle + Badge */}
+          {/* Right Div - Profile Image with Background Circle + Floating Badges */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative">
-              {/* Neon Circle Background */}
-              <div className="absolute -top-6 -right-6 w-96 h-96 rounded-full bg-neon-green/30 blur-2xl " />
+              {/* Abstract Circle Background */}
+              <div className="absolute -top-6 -right-6 w-96 h-96 rounded-full bg-primary/20 blur-3xl" />
 
               {/* Profile Image */}
               <img
                 src={profileImage}
-                alt="Rahul Dhote"
-                className="relative w-100 h-100 rounded-full object-cover grayscale   z-10"
+                alt="Rahul Dhote - Product Designer"
+                className="relative w-80 h-80 md:w-96 md:h-96 rounded-full object-cover z-10"
               />
 
-              {/* Hire Me Badge */}
-              <div className="absolute -bottom-6 -right-6 w-24 h-10 flex items-center justify-center rounded-full border-none bg-[#11ff58] border-black text-black font-bold z-20 animate-spin-slow">
-                HIRE ME
+              {/* Floating Badge - UI/UX Designer */}
+              <div className="absolute top-10 -left-10 px-4 py-2 rounded-full bg-primary text-black text-sm font-semibold shadow-lg z-20 animate-float">
+                UI/UX Designer
+              </div>
+
+              {/* Floating Badge - Product Designer */}
+              <div className="absolute top-32 -right-12 px-4 py-2 rounded-full bg-background border-2 border-primary text-primary text-sm font-semibold shadow-lg z-20 animate-float" style={{ animationDelay: '1s' }}>
+                Product Designer
+              </div>
+
+              {/* Circular Hire Me Badge */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 flex items-center justify-center rounded-full bg-primary text-black font-bold text-xs z-20 animate-spin-slow">
+                <span className="text-center">HIRE ME • HIRE ME • </span>
               </div>
             </div>
           </div>
