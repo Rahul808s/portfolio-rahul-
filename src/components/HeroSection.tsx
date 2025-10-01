@@ -22,8 +22,10 @@ export const HeroSection = () => {
               Hello There!
             </span>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              I'm <span className="text-primary">Rahul Dhote</span>, Product Designer based in USA.
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight space-y-2">
+              <div>I'm <span className="text-primary">Rahul</span></div>
+              <div><span className="text-primary">Product Designer</span></div>
+              <div>Based in USA</div>
             </h1>
             
             <p className="text-muted-foreground text-lg max-w-md mx-auto lg:mx-0">
